@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Фруктовый мир</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        html {
+
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 5rem 5rem 10rem;
+            line-height: 1.7;
+            font-family: "Montserrat", sans-serif;
+            color: #111111;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: left;
+            position: relative;
+        }
+
+        .card__emoji {
+            font-size: 24px;
+        }
+
+        .card-title {
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .card__details {
+            margin-top: 20px;
+        }
+
+        .card__detail {
+            margin-bottom: 10px;
+        }
+
+        .card__detail--organic {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 5px;
+            background-color: #76b041;
+            color: white;
+            font-weight: bold;
+            border-radius: 0 0 0 10px;
+
+        }
+
+        .card__detail--price {
+            color: #ff6600;
+        }
+
+        .card__link {
+            background-color: #008000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.2s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+
+        }
+
+        .card__link:hover {
+            background-color: #005600;
+            color: #ffffff;
+
+        }
+
+        .not-organic {
+            display: none;
+        }
+    </style>
+</head>
+    <div class="container">
+        <h1>Фруктовый мир!</h1>
+        <div class="cards-container">
+            {%PRODUCT_CARDS%}
+        </div>
+    </div>
+</body>
+
+</html>

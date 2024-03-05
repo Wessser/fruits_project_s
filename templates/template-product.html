@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>{%PRODUCTNAME%} {%IMAGE%}</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+
+      html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 5rem 5rem 10rem;
+        line-height: 1.7;
+        font-family: "Montserrat", sans-serif;
+        color: #111111;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      .product {
+        margin-top: 40px;
+        text-align: center;
+        position: relative;
+      }
+
+      .product__organic {
+        background-color: #7ac943;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      .product__hero {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .product__emoji {
+        margin-right: 5px;
+      }
+
+      .product__name {
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .product__details {
+        margin-bottom: 20px;
+      }
+
+      .product__details p {
+        margin: 5px 0;
+      }
+
+      .product__link {
+        background-color: #008000;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.2s;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+      }
+
+      .product__link:hover {
+        background-color: #005600;
+        color: #ffffff;
+      }
+
+      .product__description {
+        line-height: 1.6;
+        margin-top: 20px;
+      }
+
+      .product__back {
+        position: absolute;
+        top: -70px;
+        left: 0;
+        font-size: 24px;
+        line-height: 1;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Фруктовый мир!</h1>
+      <figure class="product">
+        <div class="product__organic {%NOT_ORGANIC%}">
+          <h5>Organic</h5>
+        </div>
+        <a href="/overview" class="product__back">
+          <span class="emoji-left">👈</span>
+        </a>
+        <div class="product__hero">
+          <span class="product__emoji product__emoji--1">{%IMAGE%}</span>
+          <span class="product__emoji product__emoji--2">{%IMAGE%}</span>
+          <span class="product__emoji product__emoji--3">{%IMAGE%}</span>
+          <span class="product__emoji product__emoji--4">{%IMAGE%}</span>
+        </div>
+        <h2 class="product__name">{%PRODUCTNAME%}</h2>
+        <div class="product__details">
+          <p><span class="emoji-ico">🌍</span>{%FROM%}</p>
+          <p><span class="emoji-ico">❤️</span>{%NUTRIENTS%}</p>
+          <p><span class="emoji-ico">📦</span>{%QUANTITY%}</p>
+          <p><span class="emoji-ico">💰</span>{%PRICE%}</p>
+        </div>
+        <a href="#" class="product__link">
+          <span class="emoji-busket">🛒</span>
+          <span>Добавить в корзину ({%PRICE%} ₸)</span>
+        </a>
+        <p class="product__description">{%DESCRIPTION%}</p>
+      </figure>
+    </div>
+  </body>
+</html>
